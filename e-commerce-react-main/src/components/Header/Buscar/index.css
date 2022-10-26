@@ -1,0 +1,23 @@
+.buscarHeader {
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+    background-color: rgb(225, 225, 225);
+    border-radius: 8px;
+    width: 500px;
+    height: 56px;
+}
+
+.input {
+    padding-left: 1.5rem;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.iconeLupa {
+    /* background-color: red; */
+    z-index: 1000;
+    font-size: 2rem;
+    color: #999;
+}
