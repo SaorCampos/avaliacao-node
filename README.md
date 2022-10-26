@@ -1,4 +1,4 @@
-## e-commerce
+## avaliação no express
 
 # Para poder executar o projeto
 
@@ -9,11 +9,8 @@ acesse `https://nodejs.org/`, baixe e instale no seu computador.
 No terminal, dentro da pasta da aplicação execute: `npm install`.
 E depois execute: `npm start`.
 
-O projeto sera executado em: `http://localhost:3000/`.
+O projeto sera executado em: `http://localhost:8000/`.
 Caso a mesma esteja livre.
-
-## Link para o figma do projeto
-https://www.figma.com/file/cfb4F7ZXMFQmvmTn3PKI4z/DRIP-STORE---DIGITAL-COLLEGE?node-id=309%3A738
 
 ## Participantes e responsabilidades
 
@@ -31,4 +28,4 @@ Carlos: responsavel pelo Get produtos;
 
 Natan: responsavel pelo Put carrinho;
 
-Saor: responsavel pelos Comentarios do produtos.
+Saor: responsavel pelos GET Comentarios do produtos.
