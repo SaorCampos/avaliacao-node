@@ -1,34 +1,32 @@
- [
-        {
-            "id": 1,
-            "nome": "produto1",
-            "preço": 100,
-            "quantidade": "45"
-        },
-        {
-            "id": 2,
-            "nome": "produto2",
-            "preço": 150,
-            "quantidade": "30"
-        },
-        {
-            "id": 3,
-            "nome": "produto3",
-            "preço": 200,
-            "quantidade": "45"
-        },
-        {
-            "id": 4,
-            "nome": "produto4",
-            "preço": 250,
-            "quantidade": "45",
-            "valorPromocao": 125
-        },
-        {
-            "id": 5,
-            "nome": "produto5",
-            "preço": 300,
-            "quantidade": "45",
-            "valorPromocao": 150
-        }
-    ]
+[
+    {
+        "id": "1",
+        "nome": "produto1",
+        "valor": 100,
+        "quantidade": "45"
+    },
+    {
+        "id": "2",
+        "nome": "produto2",
+        "valor": 150,
+        "quantidade": "30"
+    },
+    {
+        "id": "3",
+        "nome": "produto3",
+        "valor": 200,
+        "quantidade": "45"
+    },
+    {
+        "id": "4",
+        "nome": "produto4",
+        "valor": 250,
+        "quantidade": "45"
+    },
+    {
+        "id": "5",
+        "nome": "produto5",
+        "valor": 300,
+        "quantidade": "45"
+    }
+]
