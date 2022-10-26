@@ -1,6 +1,6 @@
 const express = require('express');
 const route = express.Router();
-const comentarios = require('./comentario');
+const comentario = require('./comentario');
 
 route.get('/comentario/:produtoId', (req, res) => {
     res.send(comentario.listar(req.params.produtoId));
