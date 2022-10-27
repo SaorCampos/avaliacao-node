@@ -6,7 +6,7 @@ route.get('/carrinho/:id', (req, res) =>{
     res.send(carrinho.buscarCarrinhoDoUsario(req.headers.authorization));
 });
 
-route.post('/carrinho', (req, res) => {
+route.post('/carrinho/:id', (req, res) => {
     let token = req.headers.authorization;
     res.send(carrinho.addAoCart(token, req.body));
 });

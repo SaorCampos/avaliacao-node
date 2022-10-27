@@ -1,5 +1,4 @@
 const {pegarUsuarioLogado} = require("../usuario/usuario");
-const fs = require('fs');
 
 let carrinho =
 [{"id":1,"produto":1,"usuario":1,"quantidade":5},
@@ -10,17 +9,17 @@ let carrinho =
 {"id":6,"usuario":1},{"id":7,"usuario":1}]
 
 
-function buscarCarrinhoDoUsario(token){
-    if (!token){
+function buscarCarrinhoDoUsario(token) {
+    if (!token) {
         return false;
     }
     let usuario = pegarUsuarioLogado(token);
     let resultado = carrinho.filter(cadaItem => cadaItem.usuario === usuario.id);
-    return JSON.stringify(resultado);
+    return resultado; 
 }
 
-function addAoCart(token, dados){
-    if (!token){
+function addAoCart(token, dados) {
+    if (!token) {
         return false;
     }
     let usuario = pegarUsuarioLogado(token);
@@ -30,15 +29,15 @@ function addAoCart(token, dados){
         id: novoId,
         produto: dados.produto,
         quantidade: dados.quantidade,
-        usuario: usuario.id
+        usuario : usuario.id
     }
     // adicionando o novoItem aao carrinho
     carrinho.push(novoItem);
-    fs.writeFileSync(__dirname+'/carrinho.json', JSON.stringify(carrinho));
-    return novoItem;
+    let resultado = carrinho.filter(cadaItem => cadaItem.usuario === usuario.id);
+    return resultado;
 }
-function excluirItemDoCarrinho(token, id){
-    if (!token){
+function excluirItemDoCarrinho(token, id) {
+    if (!token) {
         return 401;
     }
     let usuario = pegarUsuarioLogado(token);
