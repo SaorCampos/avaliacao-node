@@ -1,26 +1,13 @@
-const { pegarUsuarioLogado } = require("../usuario/usuario");
-// const fs = require('fs');
-// let carrinho = JSON.parse(fs.readFileSync(__dirname + "/carrinho.json"));7
-let carrinho = [
-    {
-        "id": "1",
-        "produto": "camisas",
-        "usuario": "",
-        "quantidade": "1"
-    },
-    {
-        "id": "2",
-        "produto": "tenis",
-        "usuario": "",
-        "quantidade": "1"
-    },
-    {
-        "id": "3",
-        "produto": "headphones",
-        "usuario": "",
-        "quantidade": ""
-    }
-];
+const {pegarUsuarioLogado} = require("../usuario/usuario");
+
+let carrinho =
+[{"id":1,"produto":1,"usuario":1,"quantidade":5},
+{"id":2,"produto":3,"usuario":2,"quantidade":4},
+{"id":3,"produto":2,"usuario":1,"quantidade":5},
+{"id":4,"produto":5,"usuario":4,"quantidade":5},
+{"id":5,"produto":"ypioca","quantidade":3,"usuario":1},
+{"id":6,"usuario":1},{"id":7,"usuario":1}]
+
 
 function buscarCarrinhoDoUsario(token) {
     if (!token) {
@@ -28,7 +15,7 @@ function buscarCarrinhoDoUsario(token) {
     }
     let usuario = pegarUsuarioLogado(token);
     let resultado = carrinho.filter(cadaItem => cadaItem.usuario === usuario.id);
-    return JSON.stringify(resultado);
+    return resultado; 
 }
 
 function addAoCart(token, dados) {
@@ -42,11 +29,12 @@ function addAoCart(token, dados) {
         id: novoId,
         produto: dados.produto,
         quantidade: dados.quantidade,
+        usuario : usuario.id
     }
     // adicionando o novoItem aao carrinho
     carrinho.push(novoItem);
-    // fs.writeFileSync(__dirname + '/carrinho.json', JSON.stringify(carrinho));
-    return novoItem;
+    let resultado = carrinho.filter(cadaItem => cadaItem.usuario === usuario.id);
+    return resultado;
 }
 function excluirItemDoCarrinho(token, id) {
     if (!token) {
