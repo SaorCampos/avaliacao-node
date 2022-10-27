@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 const morgan = require('morgan');
 const chalk = require('chalk');
 const app = express();
@@ -39,6 +39,7 @@ app.use('/', usuarioRota);
 app.use('/', carrinhoRota);
 
 app.use('/', comentarioRota);
+
 
 app.use((req, res) => {
     res.status(404).send("Rota não encontrada")
