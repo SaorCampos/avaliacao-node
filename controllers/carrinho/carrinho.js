@@ -1,9 +1,29 @@
-const {pegarUsuarioLogado} = require("../usuario/usuario");
-const fs = require('fs');
-let carrinho = JSON.parse(fs.readFileSync(__dirname + "/carrinho.json"));
+const { pegarUsuarioLogado } = require("../usuario/usuario");
+// const fs = require('fs');
+// let carrinho = JSON.parse(fs.readFileSync(__dirname + "/carrinho.json"));7
+let carrinho = [
+    {
+        "id": "1",
+        "produto": "camisas",
+        "usuario": "",
+        "quantidade": "1"
+    },
+    {
+        "id": "2",
+        "produto": "tenis",
+        "usuario": "",
+        "quantidade": "1"
+    },
+    {
+        "id": "3",
+        "produto": "headphones",
+        "usuario": "",
+        "quantidade": ""
+    }
+];
 
-function buscarCarrinhoDoUsario(token){
-    if (!token){
+function buscarCarrinhoDoUsario(token) {
+    if (!token) {
         return false;
     }
     let usuario = pegarUsuarioLogado(token);
@@ -11,8 +31,8 @@ function buscarCarrinhoDoUsario(token){
     return JSON.stringify(resultado);
 }
 
-function addAoCart(token, dados){
-    if (!token){
+function addAoCart(token, dados) {
+    if (!token) {
         return false;
     }
     let usuario = pegarUsuarioLogado(token);
@@ -22,15 +42,14 @@ function addAoCart(token, dados){
         id: novoId,
         produto: dados.produto,
         quantidade: dados.quantidade,
-        usuario: usuario.id
     }
     // adicionando o novoItem aao carrinho
     carrinho.push(novoItem);
-    fs.writeFileSync(__dirname+'/carrinho.json', JSON.stringify(carrinho));
+    // fs.writeFileSync(__dirname + '/carrinho.json', JSON.stringify(carrinho));
     return novoItem;
 }
-function excluirItemDoCarrinho(token, id){
-    if (!token){
+function excluirItemDoCarrinho(token, id) {
+    if (!token) {
         return 401;
     }
     let usuario = pegarUsuarioLogado(token);
