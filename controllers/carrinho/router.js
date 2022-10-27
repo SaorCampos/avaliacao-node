@@ -1,4 +1,5 @@
 const express = require('express');
+const { token } = require('morgan');
 const route = express.Router();
 const carrinho = require('./carrinho');
 
@@ -9,6 +10,10 @@ route.get('/carrinho', (req, res) =>{
 route.post('/carrinho', (req, res) => {
     let token = req.headers.authorization;
     res.send(carrinho.addAoCart(token, req.body));
+});
+
+route.put("/carrinho/:id", (req, res) => {
+    res.send(carrinho.editarItemDoCarrinho(token, req.params.id));
 });
 
 route.delete('/carrinho/:id', (req, res) => {

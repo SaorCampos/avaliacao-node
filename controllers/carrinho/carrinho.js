@@ -29,6 +29,16 @@ function addAoCart(token, dados){
     fs.writeFileSync(__dirname+'/carrinho.json', JSON.stringify(carrinho));
     return novoItem;
 }
+
+function editarItemDoCarrinho(){
+    let {id} = req.params
+    let {produto, quantidade} = req.body
+    let usuario = pegarUsuarioLogado(token);
+    let resultado = carrinho.filter(cadaItem => cadaItem.usuario == id);
+
+    return resultado
+}
+ 
 function excluirItemDoCarrinho(token, id){
     if (!token){
         return 401;
@@ -42,4 +52,5 @@ module.exports = {
     buscarCarrinhoDoUsario,
     addAoCart,
     excluirItemDoCarrinho,
+    editarItemDoCarrinho,
 }
