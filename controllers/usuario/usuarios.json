@@ -12,8 +12,8 @@
         "id": 2,
         "nome": "Matheus",
         "email": "matehus@email.com",
-        "senha": "123456",
-        "token": "",
+        "senha": "234567",
+        "token": "uar_uar_uar765432#@$KT",
         "idade": "25",
         "cidade": "São Paulo"
     },
@@ -21,8 +21,8 @@
         "id": 3,
         "nome": "Lauren",
         "email": "lauren@email.com",
-        "senha": "123456",
-        "token": "",
+        "senha": "345678",
+        "token": "uar_uar_uar876543#@$KT",
         "idade": "20",
         "cidade": "Rio de Janeiro"
     },
@@ -30,8 +30,8 @@
         "id": 4,
         "nome": "Luiz",
         "email": "luiz@email.com",
-        "senha": "123456",
-        "token": "",
+        "senha": "456789",
+        "token": "uar_uar_uar987654#@$KT",
         "idade": "40",
         "cidade": "São Luiz"
     },
@@ -39,10 +39,9 @@
         "id": 5,
         "nome": "Zé",
         "email": "ze@email.com",
-        "senha": "zxcvb",
-        "token": "uar_uar_uarbvcxz#@$KT",
+        "senha": "567890",
+        "token": "uar_uar_uar098765#@$KT",
         "idade": "36",
         "cidade": "Piauí"
     }
 ]
-
