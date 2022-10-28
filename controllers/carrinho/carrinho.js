@@ -41,9 +41,9 @@ function editarItemDoCarrinho(token, id){
     if (!token) {
         return false;
     }
+    // editando o item do carrinho
     let usuario = pegarUsuarioLogado(token);
-    
-    let resultado = usuario.filter(cadaId => cadaId.usuario === usuario.id)
+    let resultado = carrinho.filter(cadaId => cadaId.usuario === usuario.id)
     return resultado
 }
 
@@ -59,6 +59,6 @@ function excluirItemDoCarrinho(token, id) {
 module.exports = {
     buscarCarrinhoDoUsario,
     addAoCart,
-    excluirItemDoCarrinho,
     editarItemDoCarrinho,
+    excluirItemDoCarrinho,
 }
