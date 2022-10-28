@@ -36,6 +36,17 @@ function addAoCart(token, dados) {
     let resultado = carrinho.filter(cadaItem => cadaItem.usuario === usuario.id);
     return resultado;
 }
+
+function editarItemDoCarrinho(token, id){
+    if (!token) {
+        return false;
+    }
+    // editando o item do carrinho
+    let usuario = pegarUsuarioLogado(token);
+    let resultado = carrinho.filter(cadaId => cadaId.usuario === usuario.id)
+    return resultado
+}
+
 function excluirItemDoCarrinho(token, id) {
     if (!token) {
         return 401;
@@ -48,5 +59,6 @@ function excluirItemDoCarrinho(token, id) {
 module.exports = {
     buscarCarrinhoDoUsario,
     addAoCart,
+    editarItemDoCarrinho,
     excluirItemDoCarrinho,
 }
