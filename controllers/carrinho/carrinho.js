@@ -37,14 +37,30 @@ function addAoCart(token, dados) {
     return resultado;
 }
 
-function editarItemDoCarrinho(token, id){
+function editarItemDoCarrinho(token, novoItem){
     if (!token) {
         return false;
     }
+
     // editando o item do carrinho
+    
     let usuario = pegarUsuarioLogado(token);
-    let resultado = carrinho.filter(cadaId => cadaId.usuario === usuario.id)
-    return resultado
+    let itemModificado = {};
+
+    if(usuario){
+        carrinho.map((cadaItem) => {
+            if(cadaItem.id == novoItem.id) {
+                if(novoItem.quantidade){
+                    cadaItem.quantidade = novoItem.quantidade;
+                }
+                if(novoItem.produto){
+                    cadaItem.produto = novoItem.produto;
+                }
+                itemModificado = cadaItem;
+            }
+        })
+    }
+    return itemModificado;
 }
 
 function excluirItemDoCarrinho(token, id) {
