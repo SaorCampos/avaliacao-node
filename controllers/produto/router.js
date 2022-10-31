@@ -17,10 +17,10 @@ route.post("/produto", (req, res) => {
 route.put("/produto/:id", (req, res) => {
     res.send(produto.atualizar());
 });
-route.delete("/produto", (req, res) => {
-    res.send('Ta faltando o id');
-});
-route.delete("/produto/:id", (req, res) => {
-    res.send(produto.deletar(req.params.id));
-});
+// route.delete("/produto", (req, res) => {
+//     res.send('Ta faltando o id');
+// });
+// route.delete("/produto/:id", (req, res) => {
+//     res.send(produto.deletar(req.params.id));
+// });
 module.exports = route;

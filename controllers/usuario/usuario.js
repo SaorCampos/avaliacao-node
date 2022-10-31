@@ -39,10 +39,10 @@ function criar(usuario){
 function atualizar(){
     return 'Atulizar usuario'
 }
-function deletar(usuario_id){
-    let filtrados = usuarios.filter((usu)=> usu.id != usuario_id);
-    return JSON.stringify(filtrados);
-}
+// function deletar(usuario_id){
+//     let filtrados = usuarios.filter((usu)=> usu.id != usuario_id);
+//     return JSON.stringify(filtrados);
+// }
 function auth(email, senha) {
     let usuario = usuarios.filter(us => us.email === email);
     if (usuario.length === 0) {
@@ -68,7 +68,7 @@ module.exports ={
     buscar,
     criar,
     atualizar,
-    deletar,
+    // deletar,
     auth,
     pegarUsuarioLogado,
 }

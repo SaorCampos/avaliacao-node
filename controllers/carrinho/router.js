@@ -16,9 +16,9 @@ route.put('/carrinho/:id', (req, res) => {
     res.send(carrinho.editarItemDoCarrinho(token, req.body));
 });
 
-route.delete('/carrinho/:id', (req, res) => {
-    let token = req.headers.authorization;
-    res.send(carrinho.excluirItemDoCarrinho(token, req.params.id))
-})
+// route.delete('/carrinho/:id', (req, res) => {
+//     let token = req.headers.authorization;
+//     res.send(carrinho.excluirItemDoCarrinho(token, req.params.id))
+// });
 
 module.exports = route;

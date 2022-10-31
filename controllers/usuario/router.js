@@ -18,11 +18,11 @@ route.post("/login", (req, res) => {
 route.put("/usuario/:id", (req, res) => {
     res.send(usuario.atualizar());
 });
-route.delete("/usuario", (req, res) => {
-    res.send('Ta faltando o id');
-});
-route.delete("/usuario/:id", (req, res) => {
-    res.send(usuario.deletar(req.params.id));
-});
+// route.delete("/usuario", (req, res) => {
+//     res.send('Ta faltando o id');
+// });
+// route.delete("/usuario/:id", (req, res) => {
+//     res.send(usuario.deletar(req.params.id));
+// });
 
 module.exports = route;

@@ -12,6 +12,14 @@ E depois execute: `npm start`.
 O projeto sera executado em: `http://localhost:8000/`.
 Caso a mesma esteja livre.
 
+### Aviso
+
+As requesições para o carrinho(`GET, PUT e POST`) é necessario informar token.
+O qual é disponibilizado na requesição de login pelo insomnia.
+Esse tem que ser informado na aba `Headers` do insomnia.
+
+E para o `GET` dos comentarios é necessario passar o `produtoId` e `autor`(não obrigatorio) na aba `Query`.
+
 ## Participantes e responsabilidades
 
 Adrielly: responsavel pelo Get usuarios e documentação;

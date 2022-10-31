@@ -63,18 +63,21 @@ function editarItemDoCarrinho(token, novoItem){
     return itemModificado;
 }
 
-function excluirItemDoCarrinho(token, id) {
-    if (!token) {
-        return 401;
-    }
-    let usuario = pegarUsuarioLogado(token);
-    // filtrando apenas os items desse usuario logado
-    let carrinhoDoUsario = carrinho.filter(cadaItem => cadaItem.usuario === usuario.id);
-}
+// function excluirItemDoCarrinho(token, id) {
+//     if (!token) {
+//         return 401;
+//     }
+//     let usuario = pegarUsuarioLogado(token);
+//     if (!id){
+//         return 400;
+//     }
+//     // filtrando apenas os items desse usuario logado
+//     let carrinhoDoUsario = carrinho.filter(cadaItem => cadaItem.usuario === usuario.id);
+// }
 
 module.exports = {
     buscarCarrinhoDoUsario,
     addAoCart,
     editarItemDoCarrinho,
-    excluirItemDoCarrinho,
+    // excluirItemDoCarrinho,
 }
